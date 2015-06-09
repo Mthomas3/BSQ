@@ -5,7 +5,7 @@
 ** Login   <mart_4@epitech.net>
 **
 ** Started on  Fri Jan 16 12:29:38 2015 Thomas Martins
-** Last update Sun May  3 18:54:07 2015 Thomas Martins
+** Last update Tue Jun  9 23:39:44 2015 Thomas Martins
 */
 
 #include "struct.h"
@@ -34,8 +34,8 @@ int		main(int ac, char **av)
   if ((fd = open(av[1], O_RDONLY)) < 0)
     return (1);
   s = get_next_line(fd);
-  /* if ((my_getnbr(s)) > 1000 || my_getnbr(s) < 0) */
-  /*   check_one(); */
+  if ((my_getnbr(s)) > 1000 || my_getnbr(s) < 0)
+    check_one();
   if ((tab = malloc(sizeof(char *) * (my_getnbr(s) + 1))) == NULL)
     return (1);
   while ((s = get_next_line(fd)))
